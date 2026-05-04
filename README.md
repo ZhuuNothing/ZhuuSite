@@ -1,35 +1,19 @@
-# ZhuuVIP — Vercel Deployment Guide
+# ZhuuVIP — Vercel Deploy Guide
 
-## Quick Deploy (No configuration needed!)
+## Deploy in 3 Steps
 
-1. Extract this zip
-2. Push to a new GitHub repo
-3. Import the repo at **vercel.com/new**
-4. Vercel auto-detects Vite — click **Deploy**
+1. Extract this zip and push to a new GitHub repo
+2. Go to **vercel.com/new** → Import the repo
+3. Click **Deploy** (Vite is auto-detected)
 
-The AI chat works **out of the box** with smart built-in responses — no API key needed!
+The AI chat works **out of the box** — no API key needed!
 
-## Upgrade AI with OpenAI (Optional)
+## Optional: Enable Full GPT AI
 
-To get full GPT-powered AI responses, add this in Vercel → Project → Settings → Environment Variables:
+Add this in Vercel → Project → Settings → Environment Variables:
 
 | Variable | Value |
 |---|---|
-| `OPENAI_API_KEY` | Your OpenAI API key (sk-...) |
+| `OPENAI_API_KEY` | Your key (sk-...) |
 
-When set, the AI automatically upgrades to real GPT-4o-mini responses.
-
-## Structure
-
-```
-zhuuvip-vercel/
-├── src/               # React frontend source
-├── public/            # Static assets (avatar, logo, bgm.mp3)
-├── api/
-│   └── openai/
-│       └── stream-chat.ts   # Vercel Edge Function (AI chat)
-├── index.html
-├── vite.config.ts
-├── vercel.json        # Vercel build + rewrite config
-└── package.json
-```
+When set, the AI upgrades to real GPT-4o-mini responses automatically.
