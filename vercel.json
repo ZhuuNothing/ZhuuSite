@@ -1,10 +1,8 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "functions": { "api/**/*.ts": { "runtime": "@vercel/node@5.0.0" } },
   "rewrites": [
-    { "source": "/api/:path*", "destination": "/api/:path*" },
+    { "source": "/api/admin/feedback/:id/read", "destination": "/api/admin/feedback-read?id=:id" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }
