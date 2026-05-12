@@ -2,7 +2,9 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/api/admin/feedback/:id/read", "destination": "/api/admin/feedback-read?id=:id" },
+    { "source": "/api/openai/:path*", "destination": "/api/ai" },
+    { "source": "/api/admin/:path*", "destination": "/api/admin" },
+    { "source": "/api/public/:path*", "destination": "/api/data" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }
